@@ -1,27 +1,27 @@
 pub trait State {
-    fn print();
+    fn name() -> &'static str;
 }
 
 pub enum Open {}
 
 impl State for Open {
-    fn print() {
-        println!("open")
+    fn name() -> &'static str {
+        "open"
     }
 }
 
 pub enum Closed {}
 
 impl State for Closed {
-    fn print() {
-        println!("closed")
+    fn name() -> &'static str {
+        "closed"
     }
 }
 
 pub enum Locked {}
 
 impl State for Locked {
-    fn print() {
-        println!("locked")
+    fn name() -> &'static str {
+        "locked"
     }
 }

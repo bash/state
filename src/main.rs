@@ -1,9 +1,9 @@
 mod state;
 
-use state::Door;
+use state::{Door, Color};
 
 fn main() {
-    let door = Door::new();
+    let door = Door::new(Color::Green);
 
     door.print();
 
